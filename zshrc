@@ -7,12 +7,11 @@ source $ZSH/oh-my-zsh.sh
 # Disable auto correction
 unsetopt correct_all
 
-export PATH=/usr/local/bin:$PATH
 alias ls='ls -G'
 
+export PATH=/usr/local/bin:$PATH
 export PATH="./bin:$PATH"
-
-### Added by the Heroku Toolbelt
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
