@@ -88,7 +88,7 @@ set listchars=tab:>-,trail:-
 " ctrlp options
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\.git$\|log$\|tmp\|node_modules$'
+let g:ctrlp_custom_ignore = '\.git$\|log$\|tmp\|node_modules\|cookbooks$'
 
 " Gist Options
 let g:gist_detect_filetype = 1
