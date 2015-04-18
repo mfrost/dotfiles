@@ -112,6 +112,8 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+set tabpagemax=50
+
 " Experiment w/ disabled arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
