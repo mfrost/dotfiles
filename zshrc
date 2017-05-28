@@ -15,4 +15,4 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
