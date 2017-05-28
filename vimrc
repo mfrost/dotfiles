@@ -15,14 +15,14 @@ endif
 set exrc        " enable per-directory .vimrc files
 set secure      " disable unsafe commands in local .vimrc files
 
-set showcmd		  " Show (partial) command in status line.
-set showmatch	  " Show matching brackets.
-set autowrite	  " Automatically save before commands like :next and :make
+set showcmd     " Show (partial) command in status line.
+set showmatch   " Show matching brackets.
+set autowrite   " Automatically save before commands like :next and :make
 
 " Searching
-set ignorecase	" Do case insensitive matching
-set smartcase	" Do smart case matching
-set incsearch	" Incremental search
+set ignorecase  " Do case insensitive matching
+set smartcase " Do smart case matching
+set incsearch " Incremental search
 set hlsearch  " Highlight matching search terms
 
 "set hidden     " Hide buffers when they are abandoned
@@ -59,7 +59,7 @@ set foldenable
 set foldlevel=10
 set foldcolumn=0
 
-set guifont=Monaco\ 8
+set guifont=Monaco\ 9
 set statusline=%F\ %=[%c,%l]\ (%P)
 set autoread
 
@@ -69,8 +69,8 @@ noremap <C-S-c> "+y
 
 
 syntax enable
-set background=dark
-colorscheme solarized
+set synmaxcol=250
+colorscheme base16-default-dark
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -81,14 +81,14 @@ autocmd BufWinLeave * call clearmatches()
 
 " Visualize tabs and trailing spaces
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:␣␣,trail:○
 
-" set mouse=a		" Enable mouse usage (all modes)
+" set mouse=a   " Enable mouse usage (all modes)
 
 " ctrlp options
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\.git$\|log$\|tmp\|node_modules\|cookbooks$'
+let g:ctrlp_custom_ignore = '\.git$\|log$\|tmp\|node_modules\|cookbooks\|target$'
 
 " Gist Options
 let g:gist_detect_filetype = 1
@@ -101,8 +101,8 @@ set directory=~/.vim/backup
 " Status bar
 set laststatus=2
 
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
+" turn off json concealing
+let g:vim_json_syntax_conceal = 0
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -113,6 +113,8 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 set tabpagemax=50
+
+set nowrap
 
 " Experiment w/ disabled arrow keys
 inoremap  <Up>     <NOP>
