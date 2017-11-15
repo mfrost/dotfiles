@@ -1,6 +1,7 @@
+TERM=xterm-256color
 # oh-my-zsh setup
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="micah"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 DISABLE_AUTO_TITLE="true"
 source $ZSH/oh-my-zsh.sh
 
@@ -16,3 +17,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+POWERLEVEL9K_MODE='nerdfont-complete'
