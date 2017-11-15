@@ -4,8 +4,6 @@ runtime! debian.vim
 
 set nocompatible
 
-call pathogen#infect()
-call pathogen#helptags()
 
 " Jump to last line when the file was last loaded
 if has("autocmd")
