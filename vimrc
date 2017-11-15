@@ -4,6 +4,25 @@ runtime! debian.vim
 
 set nocompatible
 
+call plug#begin()
+Plug 'git://github.com/bsl/obviousmode'
+Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'https://github.com/tpope/vim-haml.git'
+Plug 'https://github.com/kchmck/vim-coffee-script'
+Plug 'https://github.com/mattn/gist-vim.git'
+Plug 'https://github.com/plasticboy/vim-markdown.git'
+Plug 'https://github.com/kien/ctrlp.vim.git'
+Plug 'git@github.com:mattn/webapi-vim.git'
+Plug 'git://github.com/tpope/vim-bundler.git'
+Plug 'git@github.com:tpope/vim-fugitive.git'
+Plug 'https://github.com/robbyrussell/oh-my-zsh.git'
+Plug 'git@github.com:mxw/vim-jsx.git'
+Plug 'git@github.com:elzr/vim-json.git'
+Plug 'git@github.com:mileszs/ack.vim.git'
+Plug 'git://github.com/wavded/vim-stylus.git'
+Plug 'https://github.com/chriskempson/base16-vim.git'
+Plug 'https://github.com/w0rp/ale.git'
+call plug#end()
 
 " Jump to last line when the file was last loaded
 if has("autocmd")

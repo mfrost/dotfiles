@@ -1,3 +1,4 @@
 vim/backup/*.sw*
 vim/bundle/*/doc/tags
 vim/.netrwhist
+vim/plugged
