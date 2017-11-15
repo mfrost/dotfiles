@@ -80,6 +80,9 @@ set guifont=Monaco\ 9
 set statusline=%F\ %=[%c,%l]\ (%P)
 set autoread
 
+let g:netrw_banner = 0
+let g:netrw_liststyle = 0
+let g:netrw_browse_split = 3
 "Cut'n'Paste to system clipboard
 noremap <C-S-c> "+y
 "noremap <C-S-v> "+p<CR>
