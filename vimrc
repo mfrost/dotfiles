@@ -1,7 +1,3 @@
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
-
 set nocompatible
 
 call plug#begin()
@@ -83,14 +79,19 @@ set autoread
 let g:netrw_banner = 0
 let g:netrw_liststyle = 0
 let g:netrw_browse_split = 3
+
 "Cut'n'Paste to system clipboard
 noremap <C-S-c> "+y
 "noremap <C-S-v> "+p<CR>
 
-
 syntax enable
+let g:solarized_termtrans = 1
+let g:solarized_termcolors=256
 set synmaxcol=250
-colorscheme base16-default-dark
+set background=dark
+colorscheme solarized
+
+let g:jsx_ext_required = 0
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -158,3 +159,5 @@ nnoremap <silent> <Up> <c-w>k
 nnoremap <silent> <Down> <c-w>j
 nnoremap <silent> <S-Up> <c-w>c
 nnoremap <silent> <S-Down> <c-w>s
+
+let g:ale_fixers = {'javascript': ['prettier']}
