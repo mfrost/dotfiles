@@ -18,6 +18,8 @@ Plug 'https://github.com/mileszs/ack.vim'
 Plug 'https://github.com/wavded/vim-stylus'
 Plug 'https://github.com/chriskempson/base16-vim'
 Plug 'https://github.com/w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Jump to last line when the file was last loaded
@@ -161,3 +163,5 @@ nnoremap <silent> <S-Up> <c-w>c
 nnoremap <silent> <S-Down> <c-w>s
 
 let g:ale_fixers = {'javascript': ['prettier']}
+
+let g:airline_powerline_fonts = 1

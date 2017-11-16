@@ -19,5 +19,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs dir status)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ip host vcs dir status)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs history battery)
