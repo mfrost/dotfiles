@@ -19,6 +19,7 @@ Plug 'git://github.com/wavded/vim-stylus.git'
 Plug 'https://github.com/chriskempson/base16-vim.git'
 Plug 'https://github.com/w0rp/ale.git'
 Plug 'chriskempson/base16-vim'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " Jump to last line when the file was last loaded
