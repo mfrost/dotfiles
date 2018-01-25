@@ -18,6 +18,7 @@ Plug 'git@github.com:mileszs/ack.vim.git'
 Plug 'git://github.com/wavded/vim-stylus.git'
 Plug 'https://github.com/chriskempson/base16-vim.git'
 Plug 'https://github.com/w0rp/ale.git'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 " Jump to last line when the file was last loaded
@@ -85,8 +86,6 @@ noremap <C-S-c> "+y
 "noremap <C-S-v> "+p<CR>
 
 syntax enable
-let g:solarized_termtrans = 1
-let g:solarized_termcolors=256
 set synmaxcol=250
 set background=dark
 colorscheme solarized
@@ -99,6 +98,9 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+let base16colorspace=256
+colorscheme base16-flat
 
 " Visualize tabs and trailing spaces
 set list

@@ -1,10 +1,5 @@
-TERM=xterm-256color
-
-# oh-my-zsh setup
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="powerlevel9k/powerlevel9k"
-DISABLE_AUTO_TITLE="true"
-source $ZSH/oh-my-zsh.sh
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Disable auto correction
 unsetopt correct_all
@@ -18,6 +13,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs dir status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs history battery)
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="minimal"
+DISABLE_AUTO_TITLE="true"
+source $ZSH/oh-my-zsh.sh
