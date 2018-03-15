@@ -62,6 +62,10 @@ set numberwidth=4
 let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
 
+" Keep those lines short, please.
+set textwidth=80
+set colorcolumn=+1
+
 " tagbar settings
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
