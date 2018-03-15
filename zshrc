@@ -11,6 +11,7 @@ export PATH="./bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
