@@ -20,6 +20,7 @@ Plug 'tpope/vim-haml'
 Plug 'Valloric/YouCompleteMe'
 Plug 'w0rp/ale'
 Plug 'wavded/vim-stylus'
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 " Jump to last line when the file was last loaded
