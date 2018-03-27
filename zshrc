@@ -15,7 +15,10 @@ export PATH="$HOME/go/bin:$PATH"
 
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
-plugins=(zsh-autosuggestions)
+plugins=(
+  docker-compose
+  zsh-autosuggestions
+)
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="minimal"
