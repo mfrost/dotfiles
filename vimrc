@@ -63,7 +63,7 @@ let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
 
 " Keep those lines short, please.
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 
 " tagbar settings
