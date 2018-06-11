@@ -169,3 +169,5 @@ nnoremap <silent> <S-Up> <c-w>c
 nnoremap <silent> <S-Down> <c-w>s
 
 let g:ale_fixers = {'javascript': ['prettier']}
+
+let ycm_collect_identifiers_from_tags_files = 1
