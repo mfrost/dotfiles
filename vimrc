@@ -4,7 +4,6 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'bsl/obviousmode'
 Plug 'chriskempson/base16-vim'
-Plug 'chriskempson/base16-vim'
 Plug 'elzr/vim-json'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
@@ -93,8 +92,6 @@ noremap <C-S-c> "+y
 
 syntax enable
 set synmaxcol=250
-set background=dark
-colorscheme solarized
 
 let g:jsx_ext_required = 0
 
@@ -105,8 +102,10 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-let base16colorspace=256
-colorscheme base16-flat
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " Visualize tabs and trailing spaces
 set list
