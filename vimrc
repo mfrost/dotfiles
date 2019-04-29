@@ -16,7 +16,7 @@ Plug 'robbyrussell/oh-my-zsh'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-haml'
-Plug 'Valloric/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'w0rp/ale'
 Plug 'wavded/vim-stylus'
 Plug 'elixir-editors/vim-elixir'
@@ -169,4 +169,10 @@ nnoremap <silent> <S-Down> <c-w>s
 
 let g:ale_fixers = {'javascript': ['prettier']}
 
-let ycm_collect_identifiers_from_tags_files = 1
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
