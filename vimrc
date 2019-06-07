@@ -175,3 +175,6 @@ if filereadable(expand("~/.vimrc_background"))
   call Base16hi("SpellLocal", g:base16_gui0D, g:base16_gui00, g:base16_cterm0D, g:base16_cterm00, "underline", g:base16_gui0D)
   call Base16hi("SpellRare",  g:base16_gui0B, g:base16_gui00, g:base16_cterm0B, g:base16_cterm00, "underline", g:base16_gui0B)
 endif
+
+" F7 to fix indentation.
+map <F7> gg=G<C-o><C-o>
