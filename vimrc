@@ -96,11 +96,6 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-
 " Visualize tabs and trailing spaces
 set list
 set listchars=tab:␣␣,trail:○
@@ -170,3 +165,13 @@ function! s:check_back_space() abort
 endfunction
 
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+
+  call Base16hi("SpellBad",   g:base16_gui08, g:base16_gui00, g:base16_cterm08, g:base16_cterm00, "underline", g:base16_gui08)
+  call Base16hi("SpellCap",   g:base16_gui0A, g:base16_gui00, g:base16_cterm0A, g:base16_cterm00, "underline", g:base16_gui0A)
+  call Base16hi("SpellLocal", g:base16_gui0D, g:base16_gui00, g:base16_cterm0D, g:base16_cterm00, "underline", g:base16_gui0D)
+  call Base16hi("SpellRare",  g:base16_gui0B, g:base16_gui00, g:base16_cterm0B, g:base16_cterm00, "underline", g:base16_gui0B)
+endif
