@@ -1,25 +1,19 @@
 set nocompatible
 
 call plug#begin()
-Plug 'altercation/vim-colors-solarized'
 Plug 'bsl/obviousmode'
-Plug 'chriskempson/base16-vim'
+Plug 'danielwe/base16-vim' " https://github.com/chriskempson/base16-vim/pull/198
 Plug 'elzr/vim-json'
-Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
-Plug 'mxw/vim-jsx'
-Plug 'plasticboy/vim-markdown'
 Plug 'robbyrussell/oh-my-zsh'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-haml'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'w0rp/ale'
-Plug 'wavded/vim-stylus'
-Plug 'elixir-editors/vim-elixir'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Jump to last line when the file was last loaded
