@@ -47,7 +47,7 @@ set smartindent
 au FileType make set noexpandtab
 
 " Turn on Spell check
-setlocal spell spelllang=en_us
+setl spell spelllang=en_us
 
 set ruler
 set number
