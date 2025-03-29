@@ -1,0 +1,5 @@
+# git config --global core.excludesfile ~/.config/git/ignore
+
+tags
+.DS_Store
+node_modules/
