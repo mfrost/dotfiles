@@ -12,7 +12,6 @@ alias ls='ls -G'
 export PATH=/usr/local/bin:$PATH
 export PATH="./bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
@@ -26,4 +25,5 @@ ZSH_THEME="minimal"
 DISABLE_AUTO_TITLE="true"
 source $ZSH/oh-my-zsh.sh
 
-eval "$(nodenv init -)"
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
