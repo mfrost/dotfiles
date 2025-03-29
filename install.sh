@@ -5,4 +5,3 @@ DOTFILES=$(dirname "$INSTALLER")
 
 echo $DOTFILES
 
-ln -sf $DOTFILES/ackrc     ~/.ackrc
