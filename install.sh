@@ -6,4 +6,3 @@ DOTFILES=$(dirname "$INSTALLER")
 echo $DOTFILES
 
 ln -sf $DOTFILES/ackrc     ~/.ackrc
-ln -sf $DOTFILES/tmux.conf ~/.tmux.conf
