@@ -1,0 +1,39 @@
+# --- View Customizations ---
+set blame-view = date:default author:full file-name:auto id:yes,color line-number:no,interval=5 text
+set grep-view = file-name:no line-number:yes,interval=1 text
+set main-view = line-number:no,interval=5 id:no date:default author:full commit-title:yes,graph,refs,overflow=no
+set refs-view = line-number:no id:no date:default author:full ref commit-title
+set stash-view = line-number:no,interval=5 id:no date:default author:full commit-title
+set status-view = line-number:no,interval=5 status:short file-name
+set tree-view = line-number:no,interval=5 mode author:full file-size date:default id:no file-name
+
+# --- Behavior Tweaks ---
+set mouse = no
+set show-changes = yes
+set wrap-lines = no
+set refresh-mode = auto
+set refresh-interval = 10
+set horizontal-scroll = 50%
+set split-view-height = 67%
+set vertical-split = auto
+set split-view-width = 50%
+set editor-line-number = yes
+set focus-child = yes
+set wrap-search = yes
+
+# --- Reference Display ---
+set reference-format = [branch] <tag> {remote} ~replace~
+
+# --- Key Bindings: Git Commands ---
+bind main C ?git cherry-pick %(commit)
+bind main <C-f> @?git commit --fixup=%(commit)
+bind main <C-R> @?git rebase --interactive %(commit)
+bind status C !git commit
+bind stash P ?git stash pop %(stash)
+bind stash ! ?git stash drop %(stash)
+bind refs C ?git checkout %(branch)
+bind refs ! ?git branch -D %(branch)
+
+# --- Key Bindings: UI & Navigation (Additions) ---
+bind main G :toggle commit-title-graph
+bind main F :toggle commit-title-refs
