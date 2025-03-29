@@ -6,8 +6,6 @@ DOTFILES=$(dirname "$INSTALLER")
 echo $DOTFILES
 
 ln -sf $DOTFILES/ackrc     ~/.ackrc
-ln -sf $DOTFILES/oh-my-zsh ~/.oh-my-zsh
 ln -sf $DOTFILES/tmux.conf ~/.tmux.conf
 ln -sf $DOTFILES/vimrc     ~/.vimrc
 ln -sf $DOTFILES/vim       ~/.vim
-ln -sf $DOTFILES/zshrc     ~/.zshrc
